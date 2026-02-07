@@ -942,7 +942,16 @@
                             <span>Product Design</span>
                             <span>Design System</span>
                         </div>
-                        <a href="#" class="btn btn-secondary view-case-study" data-project="setel">View Case Study</a>
+
+                        <!-- UPDATED: opens modal + figma button -->
+                        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                            <a href="#" class="btn btn-secondary view-case-study"
+                               data-project="setel"
+                               data-figma="PASTE_FIGMA_LINK_HERE">View Case Study</a>
+                            <a href="#" class="btn btn-secondary view-figma" data-project="setel">
+                                <i class="fab fa-figma"></i> View Figma
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -959,7 +968,16 @@
                             <span>Web Design</span>
                             <span>E-commerce</span>
                         </div>
-                        <a href="#" class="btn btn-secondary">View Case Study</a>
+
+                        <!-- UPDATED: opens modal + figma button -->
+                        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                            <a href="#" class="btn btn-secondary view-case-study"
+                               data-project="urbancart"
+                               data-figma="PASTE_FIGMA_LINK_HERE">View Case Study</a>
+                            <a href="#" class="btn btn-secondary view-figma" data-project="urbancart">
+                                <i class="fab fa-figma"></i> View Figma
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -976,7 +994,16 @@
                             <span>Data Visualization</span>
                             <span>UI/UX Design</span>
                         </div>
-                        <a href="#" class="btn btn-secondary">View Case Study</a>
+
+                        <!-- UPDATED: opens modal + figma button -->
+                        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                            <a href="#" class="btn btn-secondary view-case-study"
+                               data-project="healthtrack"
+                               data-figma="PASTE_FIGMA_LINK_HERE">View Case Study</a>
+                            <a href="#" class="btn btn-secondary view-figma" data-project="healthtrack">
+                                <i class="fab fa-figma"></i> View Figma
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1123,11 +1150,19 @@
             <button class="modal-close" id="modalClose">
                 <i class="fas fa-times"></i>
             </button>
-            
+
             <div class="case-study-header">
-                <h2>Setel Deliver2Me</h2>
-                <p>Building an experience where Setel users can get snacks & drinks from the convenience store delivered to their vehicle while fuelling</p>
-                
+                <!-- UPDATED: IDs for dynamic title/subtitle -->
+                <h2 id="csTitle">Setel Deliver2Me</h2>
+                <p id="csSubtitle">Building an experience where Setel users can get snacks & drinks from the convenience store delivered to their vehicle while fuelling</p>
+
+                <!-- UPDATED: Figma button inside modal header -->
+                <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+                    <a id="csFigmaLink" class="btn btn-secondary" href="#" target="_blank" rel="noreferrer">
+                        <i class="fab fa-figma"></i> View Figma
+                    </a>
+                </div>
+
                 <div class="case-study-meta">
                     <div class="meta-item">
                         <h4>My Role</h4>
@@ -1146,7 +1181,7 @@
                         <p>2020 March - 2021</p>
                     </div>
                 </div>
-                
+
                 <div class="case-study-tabs">
                     <button class="case-study-tab active" data-tab="overview">Overview</button>
                     <button class="case-study-tab" data-tab="problems">Problems Solved</button>
@@ -1154,7 +1189,7 @@
                     <button class="case-study-tab" data-tab="outcomes">Outcomes</button>
                 </div>
             </div>
-            
+
             <div class="case-study-content">
                 <!-- Overview Tab -->
                 <div class="tab-content active" id="overview-tab">
@@ -1163,11 +1198,11 @@
                         <p>The Setel Deliver2Me feature was designed to enhance the user experience at petrol stations by allowing customers to order snacks and drinks from the convenience store directly to their vehicle while they fuel. This innovative solution aimed to save time and provide a seamless, contactless experience.</p>
                         <p>The challenge was to design an intuitive flow that integrates with the existing Setel app while ensuring the delivery process is efficient and reliable. We needed to consider various user scenarios, from single-item purchases to group orders.</p>
                     </div>
-                    
+
                     <div class="case-study-section">
                         <h3>User Flow & Interface Design</h3>
                         <p>The design process began with mapping out the complete user journey from selecting a petrol station to receiving the delivered items. We focused on creating a simple, step-by-step process that minimizes user effort.</p>
-                        
+
                         <div class="cart-review">
                             <h4>Review your cart</h4>
                             <div class="cart-items">
@@ -1203,17 +1238,17 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <p>The cart review screen was designed to be clear and concise, allowing users to quickly verify their selections before confirming the delivery. We implemented visual indicators for item categories and easy editing options.</p>
                     </div>
                 </div>
-                
+
                 <!-- Problems Solved Tab -->
                 <div class="tab-content" id="problems-tab">
                     <div class="case-study-section">
                         <h3>Key Problems Solved</h3>
                         <p>Through extensive user research and testing, we identified several pain points in the traditional petrol station experience that the Deliver2Me feature was designed to address:</p>
-                        
+
                         <div class="problems-list">
                             <div class="problem-item">
                                 <div class="problem-icon">
@@ -1224,7 +1259,7 @@
                                     <p>Users had to leave their vehicles and queue at the convenience store, adding 5-10 minutes to their fuel stop. Our solution allowed them to order while fuelling, saving valuable time.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="problem-item">
                                 <div class="problem-icon">
                                     <i class="fas fa-hands"></i>
@@ -1234,7 +1269,7 @@
                                     <p>During the pandemic, users were concerned about unnecessary contact. Deliver2Me provided a contactless experience with minimal interaction.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="problem-item">
                                 <div class="problem-icon">
                                     <i class="fas fa-shopping-basket"></i>
@@ -1244,7 +1279,7 @@
                                     <p>Users with multiple items, children, or mobility issues found it difficult to carry purchases back to their vehicles. Delivery directly to the car solved this problem.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="problem-item">
                                 <div class="problem-icon">
                                     <i class="fas fa-map-marker-alt"></i>
@@ -1254,7 +1289,7 @@
                                     <p>Users unfamiliar with specific petrol station layouts struggled to find items quickly. The app provided clear categorization and search functionality.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="problem-item">
                                 <div class="problem-icon">
                                     <i class="fas fa-calculator"></i>
@@ -1266,7 +1301,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="case-study-section">
                         <h3>Design Solutions Implemented</h3>
                         <p>For each identified problem, we developed specific design solutions:</p>
@@ -1279,14 +1314,14 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Design Process Tab -->
                 <div class="tab-content" id="process-tab">
                     <div class="case-study-section">
                         <h3>Design Process & Methodology</h3>
                         <p>My role encompassed the entire design process, from initial user research and wireframing to creating the final UI designs and establishing a design system for the feature. I also documented the design specifications and conducted QA to ensure implementation fidelity.</p>
                         <p>We conducted multiple rounds of user testing to validate our designs, making iterative improvements based on feedback. The final design system ensured consistency across both iOS and Android platforms while allowing for platform-specific conventions.</p>
-                        
+
                         <div class="case-study-images">
                             <div class="case-study-img">
                                 <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" alt="App wireframes">
@@ -1296,7 +1331,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="case-study-section">
                         <h3>Design System Components</h3>
                         <p>Created a comprehensive design system that included:</p>
@@ -1310,13 +1345,13 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Outcomes Tab -->
                 <div class="tab-content" id="outcomes-tab">
                     <div class="case-study-section">
                         <h3>Outcomes & Impact</h3>
                         <p>The Deliver2Me feature was successfully launched in Q1 2021 and received positive feedback from users. Key metrics showed significant improvements across multiple areas:</p>
-                        
+
                         <div class="problems-list">
                             <div class="problem-item">
                                 <div class="problem-icon" style="background-color: #4CAF50;">
@@ -1327,7 +1362,7 @@
                                     <p>Convenience store sales increased by 42% at participating petrol stations within the first 3 months of launch.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="problem-item">
                                 <div class="problem-icon" style="background-color: #2196F3;">
                                     <i class="fas fa-user-check"></i>
@@ -1337,7 +1372,7 @@
                                     <p>78% of users who tried the feature reported they would use it again, with 65% becoming repeat customers.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="problem-item">
                                 <div class="problem-icon" style="background-color: #FF9800;">
                                     <i class="fas fa-star"></i>
@@ -1347,7 +1382,7 @@
                                     <p>Average app rating increased from 4.2 to 4.7 stars, with specific praise for the Deliver2Me feature.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="problem-item">
                                 <div class="problem-icon" style="background-color: #9C27B0;">
                                     <i class="fas fa-tachometer-alt"></i>
@@ -1359,7 +1394,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="case-study-section">
                         <h3>Long-term Impact</h3>
                         <p>The project also established a scalable design system that could be applied to future features within the Setel app, improving design consistency and reducing development time for subsequent projects by approximately 30%.</p>
@@ -1374,7 +1409,7 @@
         // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
             if (navLinks.style.display === 'flex') {
@@ -1387,7 +1422,7 @@
                 navLinks.style.borderRadius = '12px';
                 navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
                 navLinks.style.width = '220px';
-                
+
                 const listItems = navLinks.querySelectorAll('li');
                 listItems.forEach(item => {
                     item.style.margin = '15px 0';
@@ -1406,18 +1441,19 @@
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
+
                 e.preventDefault();
-                
-                if (this.getAttribute('href') === '#') return;
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
+
+                const targetElement = document.querySelector(href);
+                if (!targetElement) return;
+
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
-                
+
                 // Close mobile menu if open
                 if (window.innerWidth <= 768) {
                     navLinks.style.display = 'none';
@@ -1425,85 +1461,123 @@
             });
         });
 
-        // CV Download Button
+        // CV Download Button (demo)
         const cvDownloadBtn = document.getElementById('cvDownload');
         cvDownloadBtn.addEventListener('click', function() {
-            // In a real implementation, this would link to an actual PDF file
-            // For demo purposes, we'll show a message
-            alert('CV download started! In a real implementation, this would download a PDF file of my resume.');
-            
-            // Simulate download
-            const link = document.createElement('a');
-            link.href = '#';
-            link.download = 'Alex_Morgan_UIUX_Designer_CV.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            alert('CV download started! Add your real PDF later.');
         });
 
-        // Case Study Modal
+        // -----------------------------
+        // Case Study Modal (ALL PROJECTS)
+        // -----------------------------
         const caseStudyModal = document.getElementById('caseStudyModal');
         const modalClose = document.getElementById('modalClose');
-        const viewCaseStudyBtn = document.querySelector('.view-case-study');
+
+        const csTitle = document.getElementById('csTitle');
+        const csSubtitle = document.getElementById('csSubtitle');
+        const csFigmaLink = document.getElementById('csFigmaLink');
 
         // Tab functionality
         const tabs = document.querySelectorAll('.case-study-tab');
         const tabContents = document.querySelectorAll('.tab-content');
 
-        // Open modal when clicking "View Case Study" on Setel project
-        if (viewCaseStudyBtn) {
-            viewCaseStudyBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                caseStudyModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                
-                // Reset to first tab when opening modal
-                tabs.forEach(tab => tab.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-                
-                tabs[0].classList.add('active');
-                document.getElementById('overview-tab').classList.add('active');
-            });
+        // Your 3 projects data (edit figma links)
+        const PROJECTS = {
+            setel: {
+                title: "Setel Deliver2Me",
+                subtitle: "Building an experience where Setel users can get snacks & drinks from the convenience store delivered to their vehicle while fuelling",
+                figma: "PASTE_FIGMA_LINK_HERE"
+            },
+            urbancart: {
+                title: "UrbanCart - E-commerce Platform",
+                subtitle: "Redesigned the user experience for an e-commerce platform, focused on improving flow and conversion.",
+                figma: "PASTE_FIGMA_LINK_HERE"
+            },
+            healthtrack: {
+                title: "HealthTrack - Medical Dashboard",
+                subtitle: "A comprehensive dashboard for healthcare providers to monitor patient data and analytics with clear visualization.",
+                figma: "PASTE_FIGMA_LINK_HERE"
+            }
+        };
+
+        function openModal(projectKey, figmaOverride) {
+            const data = PROJECTS[projectKey] || PROJECTS.setel;
+
+            // Update modal header content
+            if (csTitle) csTitle.textContent = data.title;
+            if (csSubtitle) csSubtitle.textContent = data.subtitle;
+
+            const figmaUrl = figmaOverride || data.figma || "#";
+            if (csFigmaLink) {
+                csFigmaLink.href = figmaUrl;
+                csFigmaLink.style.display = (figmaUrl && figmaUrl !== "#") ? "inline-block" : "none";
+            }
+
+            // Reset to first tab when opening modal
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            if (tabs[0]) tabs[0].classList.add('active');
+            const overview = document.getElementById('overview-tab');
+            if (overview) overview.classList.add('active');
+
+            // Open modal
+            caseStudyModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
+
+        function closeModal() {
+            caseStudyModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Open modal for ALL buttons
+        document.querySelectorAll('.view-case-study').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const key = btn.getAttribute('data-project') || 'setel';
+                const figma = btn.getAttribute('data-figma') || (PROJECTS[key] && PROJECTS[key].figma);
+                openModal(key, figma);
+            });
+        });
+
+        // Open Figma link in new tab for ALL figma buttons
+        document.querySelectorAll('.view-figma').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const key = btn.getAttribute('data-project') || 'setel';
+                const url = (PROJECTS[key] && PROJECTS[key].figma) || "#";
+                if (url && url !== "#") window.open(url, "_blank", "noreferrer");
+                else alert("Add your Figma link first.");
+            });
+        });
 
         // Tab switching functionality
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 const tabId = tab.getAttribute('data-tab');
-                
-                // Remove active class from all tabs and contents
+
                 tabs.forEach(t => t.classList.remove('active'));
                 tabContents.forEach(content => content.classList.remove('active'));
-                
-                // Add active class to clicked tab and corresponding content
+
                 tab.classList.add('active');
-                document.getElementById(`${tabId}-tab`).classList.add('active');
+                const el = document.getElementById(`${tabId}-tab`);
+                if (el) el.classList.add('active');
             });
         });
 
         // Close modal when clicking close button
-        modalClose.addEventListener('click', function() {
-            caseStudyModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
+        modalClose.addEventListener('click', closeModal);
 
         // Close modal when clicking outside the modal
         caseStudyModal.addEventListener('click', function(e) {
-            if (e.target === caseStudyModal) {
-                caseStudyModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
+            if (e.target === caseStudyModal) closeModal();
         });
 
         // Close modal with Escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && caseStudyModal.classList.contains('active')) {
-                caseStudyModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
+            if (e.key === 'Escape' && caseStudyModal.classList.contains('active')) closeModal();
         });
     </script>
 </body>
-
 </html>
-
