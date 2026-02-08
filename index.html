@@ -1014,9 +1014,12 @@
     });
 
     // CV download demo
-    document.getElementById('cvDownload').addEventListener('click', () => {
-      alert("Add your real CV PDF link later.");
-    });
+    const cvBtn = document.getElementById('cvDownload');
+if (cvBtn) {
+  cvBtn.addEventListener('click', () => {
+    // no popup
+  });
+}
 
     // Modal + dynamic content
     const caseStudyModal = document.getElementById('caseStudyModal');
@@ -1148,6 +1151,7 @@
   </script>
 </body>
 </html>
+
 
 
 
