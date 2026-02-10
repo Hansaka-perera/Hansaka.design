@@ -324,7 +324,9 @@
       background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);
       color:#fff;
       border-radius:var(--border-radius) var(--border-radius) 0 0;
+      position:relative;
     }
+
     .case-study-header h2{ font-size:2.5rem; margin-bottom:15px; }
     .case-study-header p{ font-size:1.2rem; opacity:.9; max-width:800px; }
 
@@ -334,6 +336,9 @@
       color:var(--dark) !important;
       border:2px solid rgba(255,255,255,.9) !important;
       box-shadow:none !important;
+      position:relative;
+      z-index:5; /* ensure clickable */
+      cursor:pointer;
     }
     .btn-white:hover{
       transform:translateY(-3px);
@@ -496,22 +501,24 @@
   <!-- Header -->
   <header>
     <div class="container nav-container">
-      <a href="#" class="logo">Hansaka.design</a>
-      <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      <a href="#home" class="logo">Hansaka.design</a>
+      <button class="mobile-menu-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
 
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a id="cvDownload"
-   href="https://drive.google.com/file/d/1cAxHS7-iADmwmt3x9fTOmlYURKdP_3pK/view?usp=sharing"
-   class="btn btn-cv"
-   target="_blank" rel="noreferrer">
-   <i class="fas fa-download"></i> Download CV
-</a>
-
-</li>
+        <li>
+          <a
+            id="cvDownload"
+            href="https://drive.google.com/file/d/1cAxHS7-iADmwmt3x9fTOmlYURKdP_3pK/view?usp=sharing"
+            class="btn btn-cv"
+            target="_blank" rel="noreferrer"
+          >
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </li>
       </ul>
     </div>
   </header>
@@ -529,16 +536,15 @@
           <a href="#projects" class="btn">View My Work</a>
 
           <div class="social-icons">
-            <!-- Put your real links -->
-            <a href="#" title="Behance"><i class="fab fa-behance"></i></a>
-            <a href="www.linkedin.com/in/hansaka-perera-13ba06247" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.figma.com/@sandbox1" title="Figma"><i class="fab fa-figma"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Behance" target="_blank" rel="noreferrer"><i class="fab fa-behance"></i></a>
+            <!-- FIX: add https:// -->
+            <a href="https://www.linkedin.com/in/hansaka-perera-13ba06247" title="LinkedIn" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.figma.com/@sandbox1" title="Figma" target="_blank" rel="noreferrer"><i class="fab fa-figma"></i></a>
+            <a href="#" title="Instagram" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
 
         <div class="hero-image">
-          <!-- Replace with your image if you want -->
           <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&w=1170&q=80" alt="UI/UX Designer">
         </div>
       </div>
@@ -558,7 +564,6 @@
         <!-- Project 1 -->
         <div class="project-card">
           <div class="project-img">
-            <!-- Replace with your real project image -->
             <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1074&q=80" alt="Food Recipes Website Desktop">
           </div>
           <div class="project-info">
@@ -570,12 +575,17 @@
             </div>
 
             <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <!-- IMPORTANT: href="#" is ok but JS will preventDefault, so no scroll -->
               <a href="#" class="btn btn-secondary view-case-study"
                  data-project="recipes"
                  data-figma="https://www.figma.com/design/UNZRe7I3oGWjKLBUvn8WLZ/Untitled?node-id=0-1&t=bebCH9FKDFChPAlt-1">
                  View Case Study
               </a>
-              <a href="https://www.figma.com/design/UNZRe7I3oGWjKLBUvn8WLZ/Untitled?node-id=0-1&t=bebCH9FKDFChPAlt-1" class="btn btn-secondary view-figma" data-project="recipes">
+
+              <!-- IMPORTANT: no JS for this button. Works as normal link -->
+              <a href="https://www.figma.com/design/UNZRe7I3oGWjKLBUvn8WLZ/Untitled?node-id=0-1&t=bebCH9FKDFChPAlt-1"
+                 class="btn btn-secondary"
+                 target="_blank" rel="noreferrer">
                 <i class="fab fa-figma"></i> View Figma
               </a>
             </div>
@@ -585,7 +595,6 @@
         <!-- Project 2 -->
         <div class="project-card">
           <div class="project-img">
-            <!-- Replace with your real project image -->
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1170&q=80" alt="Food Delivery App">
           </div>
           <div class="project-info">
@@ -602,7 +611,10 @@
                  data-figma="PASTE_YOUR_FIGMA_LINK_2">
                  View Case Study
               </a>
-              <a href="#" class="btn btn-secondary view-figma" data-project="delivery">
+
+              <a href="PASTE_YOUR_FIGMA_LINK_2"
+                 class="btn btn-secondary"
+                 target="_blank" rel="noreferrer">
                 <i class="fab fa-figma"></i> View Figma
               </a>
             </div>
@@ -612,7 +624,6 @@
         <!-- Project 3 -->
         <div class="project-card">
           <div class="project-img">
-            <!-- Replace with your real project image -->
             <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1170&q=80" alt="E-commerce Website">
           </div>
           <div class="project-info">
@@ -629,7 +640,10 @@
                  data-figma="https://www.figma.com/design/1FuuEwYPyRiHCJb24H4mHY/Untitled?node-id=0-1&t=vpsKGV548Uca0lsA-1">
                  View Case Study
               </a>
-              <a href="https://www.figma.com/design/1FuuEwYPyRiHCJb24H4mHY/Untitled?node-id=0-1&t=vpsKGV548Uca0lsA-1" class="btn btn-secondary view-figma" data-project="ecom">
+
+              <a href="https://www.figma.com/design/1FuuEwYPyRiHCJb24H4mHY/Untitled?node-id=0-1&t=vpsKGV548Uca0lsA-1"
+                 class="btn btn-secondary"
+                 target="_blank" rel="noreferrer">
                 <i class="fab fa-figma"></i> View Figma
               </a>
             </div>
@@ -650,7 +664,6 @@
 
       <div class="about-content">
         <div class="about-image">
-          <!-- Replace with your real photo if you want -->
           <img src="img/profile_01.png" alt="Hansaka Perera - UI/UX Designer">
         </div>
 
@@ -763,7 +776,7 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <a href="#" class="footer-logo">Hansaka Perera</a>
+      <a href="#home" class="footer-logo">Hansaka Perera</a>
       <p class="copyright">© 2026 Hansaka Perera UI/UX Design Portfolio. All rights reserved.</p>
     </div>
   </footer>
@@ -771,7 +784,7 @@
   <!-- Case Study Modal -->
   <div class="modal-overlay" id="caseStudyModal">
     <div class="case-study-modal">
-      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <button class="modal-close" id="modalClose" aria-label="Close"><i class="fas fa-times"></i></button>
 
       <div class="case-study-header">
         <h2 id="csTitle">Case Study</h2>
@@ -811,9 +824,7 @@
       </div>
 
       <div class="case-study-content">
-        <!-- OVERVIEW -->
         <div class="tab-content active" id="overview-tab">
-
           <div class="cs-block" data-project="recipes">
             <div class="case-study-section">
               <h3>Project Overview</h3>
@@ -837,12 +848,9 @@
               <p>Main goal: help users find products faster using categories, filters, and clean product pages.</p>
             </div>
           </div>
-
         </div>
 
-        <!-- PROBLEMS -->
         <div class="tab-content" id="problems-tab">
-
           <div class="cs-block" data-project="recipes">
             <div class="case-study-section">
               <h3>Problems Solved</h3>
@@ -908,12 +916,9 @@
               </div>
             </div>
           </div>
-
         </div>
 
-        <!-- PROCESS -->
         <div class="tab-content" id="process-tab">
-
           <div class="cs-block" data-project="recipes">
             <div class="case-study-section">
               <h3>Design Process</h3>
@@ -934,12 +939,9 @@
               <p>1) Identify friction (discoverability) → 2) Redesign layout → 3) UI screens → 4) Prototype key pages.</p>
             </div>
           </div>
-
         </div>
 
-        <!-- OUTCOMES -->
         <div class="tab-content" id="outcomes-tab">
-
           <div class="cs-block" data-project="recipes">
             <div class="case-study-section">
               <h3>Outcome</h3>
@@ -960,7 +962,6 @@
               <p>A clearer e-commerce website UI with better hierarchy and product discovery.</p>
             </div>
           </div>
-
         </div>
 
       </div>
@@ -991,15 +992,18 @@
       }
     });
 
-    // Smooth scrolling
+    // Smooth scrolling (ONLY for real section links like #projects, #about, #contact)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
+
+        // IMPORTANT FIX: ignore href="#" (buttons) so they won't scroll to top
         if (!href || href === '#') return;
-        e.preventDefault();
+
         const target = document.querySelector(href);
         if (!target) return;
 
+        e.preventDefault();
         window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
         if (window.innerWidth <= 768) navLinks.style.display = 'none';
       });
@@ -1012,14 +1016,6 @@
       alert("Message sent (demo). Add real backend later.");
       contactForm.reset();
     });
-
-    // CV download demo
-    const cvBtn = document.getElementById('cvDownload');
-if (cvBtn) {
-  cvBtn.addEventListener('click', () => {
-    // no popup
-  });
-}
 
     // Modal + dynamic content
     const caseStudyModal = document.getElementById('caseStudyModal');
@@ -1076,7 +1072,6 @@ if (cvBtn) {
 
       csTitle.textContent = data.title;
       csSubtitle.textContent = data.subtitle;
-
       csRole.textContent = data.role;
       csPlatform.textContent = data.platform;
       csProduct.textContent = data.product;
@@ -1091,7 +1086,6 @@ if (cvBtn) {
       tabs[0].classList.add('active');
       document.getElementById('overview-tab').classList.add('active');
 
-      // Show correct project blocks
       setProjectBlocks(projectKey);
 
       caseStudyModal.classList.add('active');
@@ -1103,17 +1097,15 @@ if (cvBtn) {
       document.body.style.overflow = 'auto';
     }
 
-    // Buttons: open modal (ALL 3 projects)
+    // Open modal (prevent default so it won't scroll)
     document.querySelectorAll('.view-case-study').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // IMPORTANT
         const key = btn.getAttribute('data-project');
         const figma = btn.getAttribute('data-figma');
         openModal(key, figma);
       });
     });
-
-    // Buttons: open figma directly
 
     // Tabs
     tabs.forEach(tab => {
@@ -1126,7 +1118,7 @@ if (cvBtn) {
         tab.classList.add('active');
         document.getElementById(`${tabId}-tab`).classList.add('active');
 
-        // Keep showing same project blocks when tab changes
+        // Keep blocks based on title
         const currentTitle = csTitle.textContent;
         let key = "recipes";
         if (currentTitle.includes("Delivery")) key = "delivery";
@@ -1142,17 +1134,3 @@ if (cvBtn) {
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
