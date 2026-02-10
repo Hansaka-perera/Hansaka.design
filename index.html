@@ -1114,13 +1114,6 @@ if (cvBtn) {
     });
 
     // Buttons: open figma directly
-document.querySelectorAll('.view-figma').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const url = btn.getAttribute('data-figma');
-    if (url) window.open(url, "_blank", "noreferrer");
-  });
-});
 
     // Tabs
     tabs.forEach(tab => {
@@ -1149,6 +1142,7 @@ document.querySelectorAll('.view-figma').forEach(btn => {
   </script>
 </body>
 </html>
+
 
 
 
