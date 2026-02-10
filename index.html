@@ -1114,15 +1114,13 @@ if (cvBtn) {
     });
 
     // Buttons: open figma directly
-    document.querySelectorAll('.view-figma').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const key = btn.getAttribute('data-project');
-        const url = (PROJECTS[key] && PROJECTS[key].figma) || "#";
-        if (url && url !== "#") window.open(url, "_blank", "noreferrer");
-        else alert("Add your Figma link first.");
-      });
-    });
+document.querySelectorAll('.view-figma').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const url = btn.getAttribute('data-figma');
+    if (url) window.open(url, "_blank", "noreferrer");
+  });
+});
 
     // Tabs
     tabs.forEach(tab => {
@@ -1151,6 +1149,7 @@ if (cvBtn) {
   </script>
 </body>
 </html>
+
 
 
 
